@@ -3,13 +3,60 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Talha Ahmed | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>My first PHP page</h1>
-
-  <?php
-    echo "Hello World!";
-  ?>
+  <div class="hero">
+    <nav>
+      <h1 class="logo">Talha Ahmed</h1>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="hero-content">
+      <h2 class="animate-fadein">Hi, I'm <span>Talha</span></h2>
+      <p class="animate-slideup">Creative Web Developer & Designer</p>
+      <a href="#projects" class="btn animate-bounce">View My Work</a>
+    </div>
+    <div class="scroll-down animate-scroll"></div>
+  </div>
+  <section id="about" class="about-section animate-fadein">
+    <h2>About Me</h2>
+    <p>I'm a passionate developer who loves building beautiful, interactive websites with modern technologies and smooth animations.</p>
+  </section>
+  <section id="projects" class="projects-section animate-fadein">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card animate-zoom">
+        <h3>Modern Portfolio</h3>
+        <p>Responsive, animated portfolio website using HTML, CSS, and JavaScript.</p>
+      </div>
+      <div class="project-card animate-zoom">
+        <h3>React App</h3>
+        <p>Single Page Application with smooth transitions and dynamic content.</p>
+      </div>
+      <div class="project-card animate-zoom">
+        <h3>Creative Landing Page</h3>
+        <p>Landing page with parallax effects and vibrant color schemes.</p>
+      </div>
+    </div>
+  </section>
+  <section id="contact" class="contact-section animate-fadein">
+    <h2>Contact</h2>
+    <form class="contact-form animate-slideup">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+  </section>
+  <footer>
+    <p>&copy; 2025 Talha Ahmed. All rights reserved.</p>
+  </footer>
+  <script src="script.js"></script>
 </body>
 </html>
