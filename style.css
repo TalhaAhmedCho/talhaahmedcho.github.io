@@ -1,10 +1,11 @@
 body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
-  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  background: linear-gradient(45deg, #667eea 0%, #764ba2 100%); /* Updated background gradient */
   color: #fff;
   min-height: 100vh;
   overflow-x: hidden;
+  transition: background 0.3s ease; /* Smooth background transition */
 }
 
 .hero {
@@ -13,14 +14,23 @@ body {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(120deg, #ff6e7f 0%, #bfe9ff 100%);
+  background: linear-gradient(135deg, #fceabb 0%, #f8b500 100%); /* Updated hero background */
   position: relative;
-  animation: gradientBG 10s ease-in-out infinite alternate;
+  animation: gradientBG 15s ease-in-out infinite alternate, fadeIn 1s ease-out; /* Adjusted animation speed */
+  padding: 2rem;
+  border-bottom-left-radius: 60px;
+  border-bottom-right-radius: 60px;
 }
 
 @keyframes gradientBG {
   0% { background-position: 0% 50%; }
-  100% { background-position: 100% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 nav {
@@ -29,153 +39,208 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 2rem 5vw;
+  background: rgba(255, 255, 255, 0.1); /* Glassmorphism effect */
+  backdrop-filter: blur(10px);
+  border-radius: 30px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 .logo {
-  font-size: 2.2rem;
+  font-size: 2.5rem; /* Increased logo size */
   font-weight: 700;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
   color: #fff;
-  text-shadow: 0 2px 8px #0002;
+  text-shadow: 0 4px 12px #0004;
+  transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition for logo */
+}
+.logo:hover {
+  transform: scale(1.1);
+  color: #ffdb58;
 }
 nav ul {
   list-style: none;
   display: flex;
-  gap: 2rem;
+  gap: 2.5rem;
 }
 nav a {
   color: #fff;
   text-decoration: none;
   font-weight: 500;
-  font-size: 1.1rem;
-  transition: color 0.3s;
+  font-size: 1.2rem;
+  transition: color 0.3s, transform 0.3s;
+  position: relative;
+}
+nav a::before {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #ffdb58;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
 }
 nav a:hover {
-  color: #ff6e7f;
+  color: #ffdb58;
+  transform: translateY(-2px);
+}
+nav a:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
 }
 .hero-content {
   text-align: center;
   margin-top: 5vh;
+  animation: slideUp 1s ease-out;
 }
 .hero-content h2 {
-  font-size: 3rem;
+  font-size: 3.5rem;
   margin: 0;
   font-weight: 700;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
+  text-shadow: 0 4px 12px #0002;
 }
 .hero-content h2 span {
-  color: #ff6e7f;
-  text-shadow: 0 2px 8px #0002;
+  color: #ffdb58;
+  text-shadow: 0 4px 12px #0004;
 }
 .hero-content p {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   margin: 1rem 0 2rem 0;
   color: #fff;
+  text-shadow: 0 2px 8px #0002;
 }
 .btn {
-  background: linear-gradient(90deg, #ff6e7f 0%, #bfe9ff 100%);
-  color: #1e3c72;
-  padding: 0.8rem 2.2rem;
+  background: linear-gradient(90deg, #ffdb58 0%, #f093fb 100%); /* Updated button gradient */
+  color: #333;
+  padding: 1rem 2.5rem;
   border: none;
-  border-radius: 30px;
-  font-size: 1.1rem;
+  border-radius: 40px;
+  font-size: 1.2rem;
   font-weight: 700;
   cursor: pointer;
-  box-shadow: 0 4px 20px #0002;
-  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 6px 24px #0004;
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.btn:hover::before {
+  opacity: 1;
 }
 .btn:hover {
-  transform: translateY(-4px) scale(1.05);
-  box-shadow: 0 8px 32px #0003;
+  transform: translateY(-6px) scale(1.08);
+  box-shadow: 0 12px 48px #0005;
 }
 .scroll-down {
-  width: 30px;
-  height: 50px;
-  border: 2px solid #fff;
-  border-radius: 25px;
+  width: 36px;
+  height: 60px;
+  border: 3px solid #fff;
+  border-radius: 30px;
   margin: 2rem auto 0 auto;
   position: relative;
+  animation: fadeIn 1s ease-out;
 }
 .scroll-down::before {
   content: '';
   display: block;
-  width: 8px;
-  height: 8px;
+  width: 10px;
+  height: 10px;
   background: #fff;
   border-radius: 50%;
   position: absolute;
   left: 50%;
-  top: 10px;
+  top: 12px;
   transform: translateX(-50%);
-  animation: scrollAnim 1.5s infinite;
+  animation: scrollAnim 2s infinite cubic-bezier(0.65, 0.05, 0.36, 1); /* Adjusted animation */
 }
 @keyframes scrollAnim {
-  0% { top: 10px; opacity: 1; }
-  80% { top: 30px; opacity: 0.2; }
-  100% { top: 10px; opacity: 1; }
+  0% { top: 12px; opacity: 1; }
+  50% { top: 40px; opacity: 0; }
+  100% { top: 12px; opacity: 1; }
 }
 .about-section, .projects-section, .contact-section {
-  padding: 5rem 10vw 3rem 10vw;
-  background: rgba(30,60,114,0.7);
-  margin: 2rem 0;
-  border-radius: 30px;
-  box-shadow: 0 4px 32px #0002;
-  animation: fadeIn 1.2s;
+  padding: 6rem 12vw 4rem 12vw;
+  background: rgba(30, 60, 114, 0.5); /* Adjusted background transparency */
+  margin: 3rem auto;
+  border-radius: 40px;
+  box-shadow: 0 6px 32px #0003;
+  animation: fadeIn 1.5s ease-out;
+  max-width: 1200px;
 }
 .about-section h2, .projects-section h2, .contact-section h2 {
-  font-size: 2.2rem;
-  color: #bfe9ff;
-  margin-bottom: 1.5rem;
+  font-size: 2.8rem;
+  color: #ffdb58;
+  margin-bottom: 2rem;
+  text-shadow: 0 2px 8px #0003;
 }
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjusted minmax width */
+  gap: 2.5rem;
 }
 .project-card {
-  background: linear-gradient(120deg, #bfe9ff 0%, #ff6e7f 100%);
-  color: #1e3c72;
-  border-radius: 20px;
-  padding: 2rem 1.5rem;
-  box-shadow: 0 2px 16px #0002;
-  transition: transform 0.3s, box-shadow 0.3s;
-  animation: zoomIn 1s;
+  background: linear-gradient(120deg, #f8b500 0%, #fceabb 100%); /* Updated project card gradient */
+  color: #333;
+  border-radius: 25px;
+  padding: 2.5rem 2rem;
+  box-shadow: 0 4px 20px #0003;
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Smoother transition */
+  animation: zoomIn 1.2s ease-out;
 }
 .project-card:hover {
-  transform: translateY(-8px) scale(1.04);
-  box-shadow: 0 8px 32px #0003;
+  transform: translateY(-10px) scale(1.06);
+  box-shadow: 0 12px 48px #0005;
 }
 .contact-form {
   display: flex;
   flex-direction: column;
-  gap: 1.2rem;
-  max-width: 400px;
+  gap: 1.5rem;
+  max-width: 500px;
   margin: 0 auto;
 }
 .contact-form input, .contact-form textarea {
-  padding: 1rem;
-  border-radius: 10px;
+  padding: 1.2rem;
+  border-radius: 12px;
   border: none;
-  font-size: 1rem;
+  font-size: 1.1rem;
   outline: none;
-  background: #fff;
-  color: #1e3c72;
+  background: rgba(255, 255, 255, 0.8); /* Adjusted input background */
+  color: #333;
   resize: none;
+  transition: box-shadow 0.3s ease;
+}
+.contact-form input:focus, .contact-form textarea:focus {
+  box-shadow: 0 2px 8px #0003;
 }
 .contact-form button {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
 }
 footer {
   text-align: center;
-  padding: 2rem 0 1rem 0;
-  color: #bfe9ff;
-  font-size: 1rem;
+  padding: 2.5rem 0 1.5rem 0;
+  color: #ffdb58;
+  font-size: 1.1rem;
   background: none;
+  text-shadow: 0 1px 4px #0002;
+  animation: fadeIn 1s ease-out;
 }
 /* Animations */
-.animate-fadein { animation: fadeIn 1.2s; }
-.animate-slideup { animation: slideUp 1.2s; }
+.animate-fadein { animation: fadeIn 1.2s ease-out; }
+.animate-slideup { animation: slideUp 1.2s ease-out; }
 .animate-bounce { animation: bounce 1.2s infinite alternate; }
-.animate-zoom { animation: zoomIn 1s; }
+.animate-zoom { animation: zoomIn 1s ease-out; }
 .animate-scroll { animation: scrollAnim 1.5s infinite; }
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(40px); }
