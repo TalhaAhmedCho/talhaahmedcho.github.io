@@ -1,1 +1,0 @@
-// Modern portfolio site is now static HTML/CSS/JS. This file is no longer needed.
