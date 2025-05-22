@@ -1,343 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Talha Ahmed | Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E👨‍💻%3C/text%3E%3C/svg%3E">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoderVai - Learn Programming</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="cursor"></div>
-  <div id="cursor-blur"></div>
-  
-  <div class="hero" id="home">
-    <div class="particles-container" id="particles-js"></div>
-    <nav>
-      <h1 class="logo">Talha Ahmed</h1>
-      <ul>
-        <li><a href="#home" class="nav-link active">Home</a></li>
-        <li><a href="#about" class="nav-link">About</a></li>
-        <li><a href="#skills" class="nav-link">Skills</a></li>
-        <li><a href="#projects" class="nav-link">Projects</a></li>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
-      </ul>
-      <div class="theme-toggle">
-        <i class="fas fa-moon"></i>
-      </div>
-      <div class="menu-toggle">
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-      </div>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <img src="https://www.codervai.com/assets/logo-168d1b04.svg" alt="CoderVai">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#courses">Courses</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#login" class="login-btn">Login</a></li>
+            </ul>
+        </div>
     </nav>
-    <div class="hero-content">
-      <h2 class="animate-fadein">Hi, I'm <span class="gradient-text">Talha</span></h2>
-      <p class="animate-slideup">Creative <span class="typed-text"></span></p>
-      <div class="hero-buttons">
-        <a href="#projects" class="btn primary-btn animate-bounce">View My Work</a>
-        <a href="#contact" class="btn secondary-btn animate-bounce">Contact Me</a>
-      </div>
-    </div>
-    <div class="scroll-down animate-scroll">
-      <span class="mouse">
-        <span class="wheel"></span>
-      </span>
-    </div>
-  </div>
-  <section id="about" class="about-section">
-    <div class="section-header">
-      <h2 class="section-title animate-fadein">About <span class="gradient-text">Me</span></h2>
-      <div class="section-line"></div>
-    </div>
-    <div class="about-content">
-      <div class="about-image animate-fadein">
-        <div class="image-wrapper">
-          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="Talha Ahmed">
-        </div>
-      </div>
-      <div class="about-text animate-slideup">
-        <p>I'm a passionate developer who loves building beautiful, interactive websites with modern technologies and smooth animations. With a keen eye for design and a strong foundation in development, I create digital experiences that are both visually stunning and functionally robust.</p>
-        <p>My approach combines creative design thinking with technical expertise to deliver solutions that exceed expectations. I'm constantly exploring new technologies and techniques to push the boundaries of what's possible on the web.</p>
-        <div class="about-stats">
-          <div class="stat">
-            <h3>3+</h3>
-            <p>Years Experience</p>
-          </div>
-          <div class="stat">
-            <h3>50+</h3>
-            <p>Projects Completed</p>
-          </div>
-          <div class="stat">
-            <h3>30+</h3>
-            <p>Happy Clients</p>
-          </div>
-        </div>
-        <a href="#" class="btn primary-btn">Download CV <i class="fas fa-download"></i></a>
-      </div>
-    </div>
-  </section>
 
-  <section id="skills" class="skills-section">
-    <div class="section-header">
-      <h2 class="section-title animate-fadein">My <span class="gradient-text">Skills</span></h2>
-      <div class="section-line"></div>
-    </div>
-    <div class="skills-container">
-      <div class="skill-card animate-zoom">
-        <div class="skill-icon">
-          <i class="fab fa-html5"></i>
-        </div>
-        <h3>HTML5</h3>
-        <div class="skill-level">
-          <div class="skill-bar" data-level="95%"></div>
-        </div>
-      </div>
-      <div class="skill-card animate-zoom">
-        <div class="skill-icon">
-          <i class="fab fa-css3-alt"></i>
-        </div>
-        <h3>CSS3</h3>
-        <div class="skill-level">
-          <div class="skill-bar" data-level="90%"></div>
-        </div>
-      </div>
-      <div class="skill-card animate-zoom">
-        <div class="skill-icon">
-          <i class="fab fa-js"></i>
-        </div>
-        <h3>JavaScript</h3>
-        <div class="skill-level">
-          <div class="skill-bar" data-level="85%"></div>
-        </div>
-      </div>
-      <div class="skill-card animate-zoom">
-        <div class="skill-icon">
-          <i class="fab fa-react"></i>
-        </div>
-        <h3>React</h3>
-        <div class="skill-level">
-          <div class="skill-bar" data-level="80%"></div>
-        </div>
-      </div>
-      <div class="skill-card animate-zoom">
-        <div class="skill-icon">
-          <i class="fab fa-node-js"></i>
-        </div>
-        <h3>Node.js</h3>
-        <div class="skill-level">
-          <div class="skill-bar" data-level="75%"></div>
-        </div>
-      </div>
-      <div class="skill-card animate-zoom">
-        <div class="skill-icon">
-          <i class="fas fa-database"></i>
-        </div>
-        <h3>MongoDB</h3>
-        <div class="skill-level">
-          <div class="skill-bar" data-level="70%"></div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section id="projects" class="projects-section">
-    <div class="section-header">
-      <h2 class="section-title animate-fadein">My <span class="gradient-text">Projects</span></h2>
-      <div class="section-line"></div>
-    </div>
-    <div class="projects-filter">
-      <button class="filter-btn active" data-filter="all">All</button>
-      <button class="filter-btn" data-filter="web">Web</button>
-      <button class="filter-btn" data-filter="app">App</button>
-      <button class="filter-btn" data-filter="design">Design</button>
-    </div>
-    <div class="projects-grid">
-      <div class="project-card animate-zoom" data-category="web">
-        <div class="project-img">
-          <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Modern Portfolio">
-          <div class="project-overlay">
-            <div class="project-links">
-              <a href="#" class="project-link"><i class="fas fa-link"></i></a>
-              <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+    <header class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Learn Programming with Real-world Projects</h1>
+                <p>Master programming skills through practical experience and industry-relevant projects</p>
+                <div class="cta-buttons">
+                    <a href="#courses" class="primary-btn">Explore Courses</a>
+                    <a href="#trial" class="secondary-btn">Start Free Trial</a>
+                </div>
             </div>
-          </div>
-        </div>
-        <div class="project-info">
-          <h3>Modern Portfolio</h3>
-          <p>Responsive, animated portfolio website using HTML, CSS, and JavaScript.</p>
-          <div class="project-tech">
-            <span>HTML</span>
-            <span>CSS</span>
-            <span>JavaScript</span>
-          </div>
-        </div>
-      </div>
-      <div class="project-card animate-zoom" data-category="app">
-        <div class="project-img">
-          <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1674&q=80" alt="React App">
-          <div class="project-overlay">
-            <div class="project-links">
-              <a href="#" class="project-link"><i class="fas fa-link"></i></a>
-              <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+            <div class="hero-image">
+                <img src="https://www.codervai.com/assets/hero-image.png" alt="Programming Education">
             </div>
-          </div>
         </div>
-        <div class="project-info">
-          <h3>React App</h3>
-          <p>Single Page Application with smooth transitions and dynamic content.</p>
-          <div class="project-tech">
-            <span>React</span>
-            <span>Node.js</span>
-            <span>MongoDB</span>
-          </div>
-        </div>
-      </div>
-      <div class="project-card animate-zoom" data-category="design">
-        <div class="project-img">
-          <img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Creative Landing Page">
-          <div class="project-overlay">
-            <div class="project-links">
-              <a href="#" class="project-link"><i class="fas fa-link"></i></a>
-              <a href="#" class="project-link"><i class="fab fa-github"></i></a>
-            </div>
-          </div>
-        </div>
-        <div class="project-info">
-          <h3>Creative Landing Page</h3>
-          <p>Landing page with parallax effects and vibrant color schemes.</p>
-          <div class="project-tech">
-            <span>HTML</span>
-            <span>CSS</span>
-            <span>JavaScript</span>
-          </div>
-        </div>
-      </div>
-      <div class="project-card animate-zoom" data-category="web">
-        <div class="project-img">
-          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1426&q=80" alt="E-commerce Website">
-          <div class="project-overlay">
-            <div class="project-links">
-              <a href="#" class="project-link"><i class="fas fa-link"></i></a>
-              <a href="#" class="project-link"><i class="fab fa-github"></i></a>
-            </div>
-          </div>
-        </div>
-        <div class="project-info">
-          <h3>E-commerce Website</h3>
-          <p>Full-featured online store with product filtering and payment integration.</p>
-          <div class="project-tech">
-            <span>React</span>
-            <span>Node.js</span>
-            <span>Express</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section id="contact" class="contact-section">
-    <div class="section-header">
-      <h2 class="section-title animate-fadein">Contact <span class="gradient-text">Me</span></h2>
-      <div class="section-line"></div>
-    </div>
-    <div class="contact-container">
-      <div class="contact-info animate-fadein">
-        <div class="contact-item">
-          <div class="contact-icon">
-            <i class="fas fa-map-marker-alt"></i>
-          </div>
-          <div>
-            <h3>Location</h3>
-            <p>Dhaka, Bangladesh</p>
-          </div>
-        </div>
-        <div class="contact-item">
-          <div class="contact-icon">
-            <i class="fas fa-envelope"></i>
-          </div>
-          <div>
-            <h3>Email</h3>
-            <p>talha@example.com</p>
-          </div>
-        </div>
-        <div class="contact-item">
-          <div class="contact-icon">
-            <i class="fas fa-phone"></i>
-          </div>
-          <div>
-            <h3>Phone</h3>
-            <p>+880 123 456 7890</p>
-          </div>
-        </div>
-        <div class="social-links">
-          <a href="#" class="social-link"><i class="fab fa-github"></i></a>
-          <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-          <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-          <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-        </div>
-      </div>
-      <form class="contact-form animate-slideup">
-        <div class="form-group">
-          <input type="text" id="name" placeholder="Your Name" required>
-          <label for="name">Your Name</label>
-        </div>
-        <div class="form-group">
-          <input type="email" id="email" placeholder="Your Email" required>
-          <label for="email">Your Email</label>
-        </div>
-        <div class="form-group">
-          <input type="text" id="subject" placeholder="Subject" required>
-          <label for="subject">Subject</label>
-        </div>
-        <div class="form-group">
-          <textarea id="message" placeholder="Your Message" required></textarea>
-          <label for="message">Your Message</label>
-        </div>
-        <button type="submit" class="btn primary-btn">
-          Send Message <i class="fas fa-paper-plane"></i>
-        </button>
-      </form>
-    </div>
-  </section>
-  <footer>
-    <div class="footer-content">
-      <div class="footer-logo">
-        <h2>Talha Ahmed</h2>
-        <p>Creative Web Developer & Designer</p>
-      </div>
-      <div class="footer-links">
-        <div class="footer-link-group">
-          <h3>Navigation</h3>
-          <a href="#home">Home</a>
-          <a href="#about">About</a>
-          <a href="#skills">Skills</a>
-          <a href="#projects">Projects</a>
-          <a href="#contact">Contact</a>
-        </div>
-        <div class="footer-link-group">
-          <h3>Social</h3>
-          <a href="#"><i class="fab fa-github"></i> Github</a>
-          <a href="#"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
-          <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
-          <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
-        </div>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2025 Talha Ahmed. All rights reserved.</p>
-    </div>
-  </footer>
+    </header>
 
-  <!-- Scroll to top button -->
-  <button id="scroll-top" class="scroll-top" title="Scroll to top">
-    <i class="fas fa-arrow-up"></i>
-    <span class="sr-only">Scroll to top</span>
-  </button>
+    <section class="courses" id="courses">
+        <div class="container">
+            <h2>Our Popular Courses</h2>
+            <div class="course-grid">
+                <div class="course-card">
+                    <img src="https://www.codervai.com/assets/web-dev.jpg" alt="Web Development">
+                    <div class="course-content">
+                        <h3>Full Stack Web Development</h3>
+                        <p>Learn frontend and backend development</p>
+                        <div class="course-meta">
+                            <span><i class="fas fa-clock"></i> 6 months</span>
+                            <span><i class="fas fa-users"></i> Beginner</span>
+                        </div>
+                        <a href="#" class="course-btn">Learn More</a>
+                    </div>
+                </div>
+                <!-- Add more course cards as needed -->
+            </div>
+        </div>
+    </section>
 
-  <!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-  <script src="script.js"></script>
+    <section class="features">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-laptop-code"></i>
+                    <h3>Live Classes</h3>
+                    <p>Interactive sessions with industry experts</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-project-diagram"></i>
+                    <h3>Real Projects</h3>
+                    <p>Build portfolio-worthy projects</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Community Support</h3>
+                    <p>Learn and grow with peers</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="https://www.codervai.com/assets/logo-168d1b04.svg" alt="CoderVai">
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="#courses">Courses</a></li>
+                            <li><a href="#about">About Us</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Connect With Us</h4>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 CoderVai. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

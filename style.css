@@ -1,21 +1,22 @@
 /* ===== VARIABLES ===== */
 :root {
   /* Primary Colors */
-  --primary-color: #6366f1;
-  --secondary-color: #f43f5e;
+  --primary-color: #2563eb;
+  --secondary-color: #1d4ed8;
   --accent-color: #22d3ee;
   --accent-color-2: #fbbf24;
   
   /* Gradient Colors */
-  --gradient-1: linear-gradient(135deg, #6366f1 0%, #f43f5e 100%);
-  --gradient-2: linear-gradient(135deg, #22d3ee 0%, #6366f1 100%);
-  --gradient-3: linear-gradient(135deg, #f43f5e 0%, #fbbf24 100%);
-  --gradient-4: linear-gradient(135deg, #6366f1 0%, #f43f5e 50%, #fbbf24 100%);
+  --gradient-1: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  --gradient-2: linear-gradient(135deg, #22d3ee 0%, #2563eb 100%);
+  --gradient-3: linear-gradient(135deg, #1d4ed8 0%, #fbbf24 100%);
+  --gradient-4: linear-gradient(135deg, #2563eb 0%, #1d4ed8 50%, #fbbf24 100%);
   
   /* Background Colors */
   --bg-primary: #0f172a;
   --bg-secondary: #1e293b;
   --bg-card: rgba(30, 41, 59, 0.7);
+  --light-bg: #f3f4f6;
   
   /* Glass Effect */
   --glass-bg: rgba(255, 255, 255, 0.1);
@@ -26,6 +27,7 @@
   --text-primary: #ffffff;
   --text-secondary: #e0e0e0;
   --text-tertiary: #a0a0a0;
+  --text-color: #1f2937;
   
   /* Other Colors */
   --success-color: #4caf50;
@@ -417,6 +419,8 @@ nav ul {
 .hero {
   position: relative;
   overflow: hidden;
+  padding: 4rem 0;
+  background: var(--light-bg);
 }
 
 .hero::before {
@@ -943,17 +947,15 @@ nav ul {
 
 /* ===== FOOTER ===== */
 footer {
-  background: var(--bg-secondary);
-  padding: 4rem 5% 1rem;
-  position: relative;
+  background: #1f2937;
+  color: white;
+  padding: 4rem 0 1rem;
 }
 
 .footer-content {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 2rem;
-  flex-wrap: wrap;
-  margin-bottom: 3rem;
 }
 
 .footer-logo h2 {
